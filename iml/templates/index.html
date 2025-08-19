@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input { margin: 10px; padding: 8px; width: 250px; }
+        button { padding: 10px; background: blue; color: white; border: none; cursor: pointer; }
+        .result { margin-top: 20px; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>🎓 Student Performance Predictor</h1>
+    <form method="POST">
+        <input type="text" name="name" placeholder="Enter Student Full Name" required><br>
+        <input type="text" name="code" placeholder="Enter Student Exam Code" required><br>
+        <input type="text" name="score" placeholder="Enter Student Score (e.g., 320000)" required><br>
+        <button type="submit">Predict Performance</button>
+    </form>
+    
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+</body>
+</html>
